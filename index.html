@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Vairavel's Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <div class="creator-info">
+        <img src="assets/images/profile.jpg" alt="Vairavel" class="creator-photo">
+        <div class="creator-details">
+            <span>A. Vairavel</span>
+            <span>CSE - Bioinformatics</span>
+            <span>VIT, Vellore</span>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <header>
+            <img src="assets/images/logo.png" class="logo" alt="Logo">
+            <h1>BrainBuster</h1>
+        </header>
+
+        <!-- Setup Screen -->
+        <div class="screen" id="setup-screen">
+            <h2>⚙️ Quiz Setup</h2>
+            <div class="form-group">
+                <label>Number of Questions:</label>
+                <select id="question-count">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Category:</label>
+                <select id="category">
+                    <option value="17">Biology</option>
+                    <option value="18">Computers</option>
+                    <option value="19">Mathematics</option>
+                </select>
+            </div>
+            <button id="start-btn">Start Quiz ▸</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen hide" id="quiz-screen">
+            <div class="quiz-header">
+                <span class="progress">Question <span id="current-q">1</span>/<span id="total-q">5</span></span>
+                <span class="timer">⌛ <span id="time">5</span>s</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <h2 id="question"></h2>
+            <div class="options" id="options"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="screen hide" id="result-screen">
+            <h2>🎯 Results</h2>
+            <div class="score-display">
+                <span id="score">0</span>/<span id="total">0</span>
+            </div>
+            <button id="restart-btn">⟳ Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
